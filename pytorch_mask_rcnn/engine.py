@@ -45,7 +45,8 @@ def train_one_epoch(model, optimizer, data_loader, device, epoch, args):
         optimizer.zero_grad()
 
         if num_iters % args.print_freq == 0:
-            print("{}\t".format(num_iters), "\t".join("{:.3f}".format(l.item()) for l in losses.values()))
+            # print("{}\t".format(num_iters), "\t".join("{:.3f}".format(l.item()) for l in losses.values()))
+            print(f"epoch: {epoch}|iter {num_iters}: " + "".join(f"|{k}: {v:.2f}| " for k, v in losses.items()))
 
         t_m.update(time.time() - T)
         if i >= iters - 1:

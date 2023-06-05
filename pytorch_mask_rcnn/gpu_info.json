@@ -1,0 +1,1 @@
+{"NVIDIA GeForce RTX 3090": {"performance": {"1": {"maskrcnn": [[19.64, 23.21], [21.85, 21.31], [21.28, 21.54]]}}, "properties": {"capability": [8, 6], "name": "NVIDIA GeForce RTX 3090", "sm_count": 82, "total_momory": 23.67}}}

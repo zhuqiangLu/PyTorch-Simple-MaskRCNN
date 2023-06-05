@@ -17,11 +17,11 @@ def main(args):
         
     # ---------------------- prepare data loader ------------------------------- #
     
-    dataset_train = pmr.datasets(args.dataset, args.data_dir, "train2017", train=True)
+    dataset_train = pmr.datasets(args.dataset, args.data_dir, "train2014", train=True)
     indices = torch.randperm(len(dataset_train)).tolist()
     d_train = torch.utils.data.Subset(dataset_train, indices)
     
-    d_test = pmr.datasets(args.dataset, args.data_dir, "val2017", train=True) # set train=True for eval
+    d_test = pmr.datasets(args.dataset, args.data_dir, "val2014", train=True) # set train=True for eval
         
     args.warmup_iters = max(1000, len(d_train))
     
